@@ -75,7 +75,7 @@ thusfar:
 
 ```javascript
 {
-  "status": "RUNNING", // or "SUCCESS" or "ERROR"
+  "status": "RUNNING", // or "OK" or "ERROR"
   "startedAt": "2017-11-12T23:50:00.236Z",
   "finishedAt": null, // On completion, this is set
   "output": {
