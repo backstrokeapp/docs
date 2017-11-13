@@ -1,2 +1,7 @@
-# docs
-Documenting how the Backstroke service works under-the-hood
+# Backstroke Documentation
+
+This repository documents how sub-systems within Backstroke interact to perform common tasks.
+
+- [Redis: How the worker accepts jobs and provides status updates](REDIS.md)
+- Database: General philosophies and a database schema
+- Dashboard: How users log into the dashboard and update links
