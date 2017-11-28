@@ -1,4 +1,4 @@
-# The operation dispatcher: how do automatic link udpates work?
+# The operation dispatcher: How automatic link updates work
 
 In Backstroke's system, links between repositories are kept up to date automatically. How does that work? The `operation-dispatcher` job, found [here](https://github.com/backstrokeapp/jobs/tree/master/operation-dispatcher), does the majority of that work.
 
