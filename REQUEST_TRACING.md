@@ -24,5 +24,23 @@ Here's the format, explained:
 - `0007` is the pid of the haproxy instance that handled this request.
 
 
-How do you trace a route from "the edge" (ie, haproxy) all the way through to the link operations that the reqest has created?
-Coming soon!
+How do you trace a route from "the edge" (ie, haproxy) all the way through to the link operations
+that the request has created? Let's walk through the lifecycle of some example requests.
+
+## Simple case: request only hits one service
+Let's say that I make a `GET api.backstroke.co/v1/links` request. This request, like all others,
+will be routed through haproxy, which will tag the request with a request id. This request id will
+then be proxied along with the request that haproxy makes to the `server` service on behalf of the
+user.
+
+When the `server` service receives the request, it logs the id of the request prior to handling it.
+This means each request that comes into haproxy can be tied to the subsequent request made to the
+`server` service.
+
+## More complicated case: queued links
+TODO
+
+# Notes
+- Remember that in development, just hitting the endpoints of the services (and not going through
+  haproxy) won't generate request ids. Ie, `curl http://localhost:8000` won't generate a request id but
+  `curl -H 'Host: api.backstroke.co' http://localhost` will generate a request id.
