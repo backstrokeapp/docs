@@ -4,6 +4,7 @@ This repository documents how sub-systems within Backstroke interact to perform 
 
 - [Redis: How the worker accepts jobs and provides status updates](REDIS.md)
 - [Operation Dispatcher: How do links automatically update?](OPERATION_DISPATCHER.md)
+- [Request Tracing: How to follow a request through the entire system via its request id](REQUEST_TRACING.md)
 - Database: General philosophies and a database schema
 - Dashboard: How users log into the dashboard and update links
 
